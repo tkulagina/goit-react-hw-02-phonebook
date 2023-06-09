@@ -1,11 +1,12 @@
 import { Component } from 'react';
+import shortid from 'shortid';
 
 import {ContactList} from 'components/ContactList/ContactList';
 import {Form} from 'components/Form/Form';
 import {Filter} from 'components/Filter/Filter';
 import data from 'data/data';
-import shortid from 'shortid';
-import s from './PhoneBook.module.css';
+
+import css from './PhoneBook.module.css';
 
 
 export class PhoneBook extends Component {
@@ -71,10 +72,10 @@ export class PhoneBook extends Component {
     const vizibleContacts = this.getVisibleContacts();
 
     return (
-      <div className={s.wrapper}>
-        <h1 className={s.title}>Phonebook</h1>
+      <div className={css.wrapper}>
+        <h1 className={css.mainTitle}>Phonebook</h1>
         <Form onSubmit={this.formSubmitHandler} />
-        <h1 className={s.title}>Contacts</h1>
+        <h2 className={css.title}>Contacts</h2>
         <Filter value={filter} onChangeFilter={this.changeFilter} />
         <ContactList
           vizibleContacts={vizibleContacts}

@@ -5,12 +5,14 @@
     align-items: flex-start;
   }
   .label {
-    font-size: 25px;
-    color: black;
+    margin-top: 4px;
+    font-size: 24px;
+    color: #1D1E55;
   }
   .input {
-    border-radius: 5px;
-    color: black;
+    border: 1px solid #1D1E55;
+    border-radius: 4px;
+    color: #1D1E55;
     height: 30px;
     width: 260px;
   }

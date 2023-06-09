@@ -1,18 +1,23 @@
-.item {
+.item {   
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   .item:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
   }
   .text {
-    color: black;
+     margin-top: 0;
+    margin-bottom: 0;
+    color: #1D1E55;
     font-size: 24px;
     text-align: left;
   }
   .btn {
     padding: 10px;
     font-size: 20px;
+    color:aliceblue;
+    background-color: #32337C;
+    border: 1px solid #1D1E55;
     border-radius: 5px;
   }

@@ -1,12 +1,12 @@
-import s from './ContactList.module.css';
-import {ItemContact} from 'components/ItemContact/ItemContact';
 import PropTypes from 'prop-types';
+import {ItemContact} from 'components/ItemContact/ItemContact';
+import css from './ContactList.module.css';
 
 export const ContactList = props => {
   const { vizibleContacts, onDeleteContact } = props;
 
   return (
-    <ul className={s.list}>
+    <ul className={css.list}>
       {vizibleContacts?.length
         ? vizibleContacts.map(contact => (
             <ItemContact
