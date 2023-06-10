@@ -4,14 +4,14 @@ import css from './ItemContact.module.css';
 export const ItemContact = props => {
   const { contact, onDeleteContact } = props;
   return (
-    <li className={css.item} id={contact.id}>
+    <li className={css.item}>
       <p className={css.text}>
         {contact.name}: {contact.number}
       </p>
       <button
         id={contact.id}
         type="button"
-        onClick={onDeleteContact}
+        onClick={() => onDeleteContact(contact.id)}
         className={css.btn}
       >
         Delete

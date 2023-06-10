@@ -4,15 +4,20 @@ import shortid from 'shortid';
 import {ContactList} from 'components/ContactList/ContactList';
 import {Form} from 'components/Form/Form';
 import {Filter} from 'components/Filter/Filter';
-import data from 'data/data';
+/*import data from 'data/data';*/
 
 import css from './PhoneBook.module.css';
 
 
 export class PhoneBook extends Component {
   state = {
-    contacts: data,
-
+    /*contacts: data,*/
+    contacts: [
+      { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
+      { id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
+      { id: 'id-3', name: 'Eden Clements', number: '645-17-79' },
+      { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
+    ],
     filter: '',
   };
 
@@ -47,13 +52,23 @@ export class PhoneBook extends Component {
     }));
   };
 
-  deleteContact = e => {
+  /*deleteContact = e => {
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(
         contact => contact.id !== e.target.id
       ),
     }));
+    console.log (e);
+    console.log (e.target.id);
+    
+  };*/
+
+  deleteContact = id => {
+    this.setState(prevState => ({
+      contacts: prevState.contacts.filter(contact => contact.id !== id),
+    }));
   };
+
 
   changeFilter = e => {
     this.setState({ filter: e.currentTarget.value });
